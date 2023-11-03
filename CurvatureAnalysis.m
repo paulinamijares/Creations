@@ -1,10 +1,3 @@
-%Equipo 2
-%Paulina Mijares A01383803 
-%Hugo Lozano A01383795 
-%Fernanda Tenorio A01178269 
-%Carlos Agostini A01571340 
-%Guillermo Montemayor A01722402
-
 clear
 clc 
 clf
