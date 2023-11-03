@@ -1,8 +1,3 @@
-// Este programa lee un ordena un archivo txt cronologicamente, permite al usuario buscar registros y guarda un archivo nuevo con la información
-// Paulina Mijares A01383803
-// Marcelo Cárdenas A00836049
-// Fernando Renteria A00836509
-// Última modificación: 10/09/2023
 
 // Declaran las Librerias a utilizar
 #include <iostream>
@@ -23,7 +18,7 @@ struct datosEntrada {
     string razon;
 };
 
-// Función que convierte los nombres de los meses en números para ordenar en orden cronológico
+// FunciÃ³n que convierte los nombres de los meses en nÃºmeros para ordenar en orden cronolÃ³gico
 bool compararEntradas(const datosEntrada& entrada1, const datosEntrada& entrada2) {
 
     map<string, int> mesNumero = {
@@ -50,7 +45,7 @@ bool compararEntradas(const datosEntrada& entrada1, const datosEntrada& entrada2
     int hora1 = stoi(entrada1.hora);
     int hora2 = stoi(entrada2.hora);
 
-    // Comparar primero por mes (en formato numérico), luego por día y finalmente por hora
+    // Comparar primero por mes (en formato numÃ©rico), luego por dÃ­a y finalmente por hora
     if (mes1 != mes2) {
         return mes1 < mes2;
     }
@@ -61,7 +56,7 @@ bool compararEntradas(const datosEntrada& entrada1, const datosEntrada& entrada2
 }
 
 int fechaNumerica(const datosEntrada& entrada) {
-    // Convierte la fecha en formato "Mes Día" en un valor numérico (ejemplo: "Aug 1" -> 801)
+    // Convierte la fecha en formato "Mes DÃ­a" en un valor numÃ©rico (ejemplo: "Aug 1" -> 801)
     map<string, int> mesNumero = {
         {"Jan", 1}, {"Feb", 2}, {"Mar", 3}, {"Apr", 4}, {"May", 5}, {"Jun", 6},
         {"Jul", 7}, {"Aug", 8}, {"Sep", 9}, {"Oct", 10}, {"Nov", 11}, {"Dec", 12}
@@ -71,7 +66,7 @@ int fechaNumerica(const datosEntrada& entrada) {
     return mes * 100 + dia;
 }
 
-// Función para ordenar un vector de 'datosEntrada' usando Merge Sort
+// FunciÃ³n para ordenar un vector de 'datosEntrada' usando Merge Sort
 void mergeSort(vector<datosEntrada>& entradas, int inicio, int fin) {
     if (inicio < fin) {
         int mitad = (inicio + fin) / 2;
@@ -136,7 +131,7 @@ int main() {
 
     cout << "Datos ordenados y guardados en 'bitacora_ordenada.txt'." << endl;
 
-  // Solicitar al usuario las fechas de inicio y fin de búsqueda
+  // Solicitar al usuario las fechas de inicio y fin de bÃºsqueda
     string mesInicio, diaInicio, mesFin, diaFin;
     cout << "Ingrese fecha de inicio (Ej. Aug 1): ";
     cin >> mesInicio >> diaInicio;
